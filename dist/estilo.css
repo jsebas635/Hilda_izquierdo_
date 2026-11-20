@@ -1,0 +1,41 @@
+:root {
+  color-scheme: light;
+  --papel: #f8f6f1;
+  --tinta: #2c211c;
+  --linea: #ccc1b7;
+  --margen: clamp(1.35rem, 6vw, 7rem);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--papel); color: var(--tinta); font: 1rem/1.5 Arial, sans-serif; }
+header, footer { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem var(--margen); }
+a { color: inherit; text-underline-offset: .35em; }
+a:focus-visible { outline: 3px solid #ae673b; outline-offset: 4px; }
+.firma, h1, h2, figcaption { font-family: Georgia, serif; font-weight: normal; }
+.firma { font-size: 1.6rem; letter-spacing: -.055em; text-decoration: none; }
+nav a, footer a { font-size: .9rem; }
+.portada { display: grid; grid-template-columns: 1fr 1fr; background: #34251f; color: var(--papel); }
+.texto { padding: 4rem var(--margen); align-self: center; }
+h1 { margin: 0; font-size: clamp(4rem, 8.7vw, 10rem); letter-spacing: -.07em; line-height: .94; }
+h1 i { font-weight: normal; color: #f1d9c4; }
+.texto p { margin: 1.7rem 0 3.5rem; }
+.enlace { display: inline-block; padding: .6rem 0; border-bottom: 1px solid; text-decoration: none; }
+.estudio { width: 100%; height: clamp(33rem, 78vh, 54rem); object-fit: cover; object-position: center 75%; }
+#coleccion { padding: clamp(3rem, 6vw, 7rem) var(--margen); }
+h2 { font-size: clamp(3rem, 5vw, 6rem); letter-spacing: -.06em; margin: 0 0 2rem; }
+.galeria { display: grid; grid-template-columns: 1fr .82fr; gap: clamp(2rem, 7vw, 8rem); }
+figure { margin: 0; }
+figure:nth-child(2) { margin-top: 5rem; }
+figure img { width: 100%; height: auto; display: block; }
+figure a { display: block; cursor: zoom-in; }
+figcaption { font-size: clamp(1.4rem, 2vw, 2.2rem); margin-top: .75rem; }
+footer { border-top: 1px solid var(--linea); }
+@media (max-width: 680px) {
+  .portada, .galeria { grid-template-columns: 1fr; }
+  .texto { padding: 2.3rem var(--margen); }
+  h1 { font-size: clamp(3rem, 11vw, 5rem); }
+  h1 br { display: none; }
+  h1 i::before { content: ' '; }
+  .texto p { margin: .65rem 0 .6rem; }
+  .estudio { height: auto; aspect-ratio: 1 / 1.07; }
+  figure:nth-child(2) { margin-top: 0; }
+}

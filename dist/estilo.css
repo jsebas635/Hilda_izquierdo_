@@ -22,20 +22,28 @@ h1 i { font-weight: normal; color: #f1d9c4; }
 .estudio { width: 100%; height: clamp(33rem, 78vh, 54rem); object-fit: cover; object-position: center 75%; }
 #coleccion { padding: clamp(3rem, 6vw, 7rem) var(--margen); }
 h2 { font-size: clamp(3rem, 5vw, 6rem); letter-spacing: -.06em; margin: 0 0 2rem; }
-.galeria { display: grid; grid-template-columns: 1fr .82fr; gap: clamp(2rem, 7vw, 8rem); }
-figure { margin: 0; }
-figure:nth-child(2) { margin-top: 5rem; }
-figure img { width: 100%; height: auto; display: block; }
-figure a { display: block; cursor: zoom-in; }
-figcaption { font-size: clamp(1.4rem, 2vw, 2.2rem); margin-top: .75rem; }
+.muestrario { position: relative; margin: 0; padding: 0; border: 0; min-width: 0; }
+.muestrario legend, .muestrario input { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.muestrario label { display: inline-block; cursor: pointer; padding: .55rem .9rem; margin: 0 .35rem .8rem 0; border: 1px solid #aa978b; border-radius: 2rem; font-size: .95rem; }
+.muestrario input:checked + label { background: var(--tinta); color: white; border-color: var(--tinta); }
+.muestrario input:focus-visible + label { outline: 3px solid #ae673b; outline-offset: 3px; }
+.pieza { display: none; align-items: center; grid-template-columns: 1fr 1fr; margin-top: 1rem; background: #eae1d7; }
+#cobre:checked ~ .pieza-cobre, #cuentas:checked ~ .pieza-cuentas { display: grid; }
+.ficha { padding: clamp(1.5rem, 4.6vw, 5rem); }
+.ficha h3 { font: normal clamp(2.3rem, 4.8vw, 5.4rem)/1.03 Georgia, serif; letter-spacing: -.055em; margin: 0; }
+.ficha h3 i { display: block; }
+.ficha p { max-width: 32ch; margin: 1.4rem 0; }
+.detalle { display: inline-block; padding: .55rem 0; }
+.pieza img { width: 100%; height: auto; display: block; }
 footer { border-top: 1px solid var(--linea); }
 @media (max-width: 680px) {
-  .portada, .galeria { grid-template-columns: 1fr; }
+  .portada { grid-template-columns: 1fr; }
   .texto { padding: 2.3rem var(--margen); }
   h1 { font-size: clamp(3rem, 11vw, 5rem); }
   h1 br { display: none; }
   h1 i::before { content: ' '; }
   .texto p { margin: .65rem 0 .6rem; }
   .estudio { height: auto; aspect-ratio: 1 / 1.07; }
-  figure:nth-child(2) { margin-top: 0; }
+  .pieza { grid-template-columns: 1fr; }
+  .pieza img { grid-row: 1; }
 }

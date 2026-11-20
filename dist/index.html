@@ -11,10 +11,31 @@
 <div class="texto"><h1 id="titulo">Hilda<br><i>Izquierdo</i></h1><p>Bolsos tejidos a mano</p><a class="enlace" href="#coleccion">Explorar la colección</a></div>
 <img class="estudio" src="images/estudio.jpg" alt="Bolso cilíndrico tejido en hilo de cobre con asa tejida, sobre una pila de libros.">
 </section>
-<section id="coleccion"><h2>La colección</h2>
-<div class="galeria">
-<figure><a href="images/bandolera.jpg"><img loading="lazy" src="images/bandolera.jpg" alt="Bolso tejido en hilo de cobre con correa larga, llevado a la altura de la cadera."></a><figcaption>Bolso tejido en hilo de cobre</figcaption></figure>
-<figure><a href="images/bolso.jpg"><img loading="lazy" src="images/bolso.jpg" alt="Bolso de hombro de tejido marrón con un adorno de cuentas multicolores."></a><figcaption>Bolso de hombro con cuentas</figcaption></figure>
-</div></section></main>
+<section id="coleccion" aria-labelledby="coleccion-titulo">
+  <h2 id="coleccion-titulo">La colección</h2>
+  <fieldset class="muestrario">
+    <legend>Elige una pieza</legend>
+    <input type="radio" name="pieza" id="cobre" checked>
+    <label for="cobre">Hilo de cobre</label>
+    <input type="radio" name="pieza" id="cuentas">
+    <label for="cuentas">Bolso con cuentas</label>
+    <article class="pieza pieza-cobre">
+      <div class="ficha">
+        <h3>Bolso tejido en <i>hilo de cobre</i></h3>
+        <p>El punto abierto dibuja pequeñas estrellas. Una franja de tejido más cerrado da forma a la base.</p>
+        <a class="detalle" href="images/estudio.jpg">Ver el tejido de cerca</a>
+      </div>
+      <img loading="lazy" src="images/bandolera.jpg" width="1619" height="2048" alt="Bolso de hilo de cobre llevado a la cadera, con el asa extendida.">
+    </article>
+    <article class="pieza pieza-cuentas">
+      <div class="ficha">
+        <h3>Bolso de hombro <i>con cuentas</i></h3>
+        <p>Sobre la trama marrón, un racimo de cuentas acompaña la caída del asa.</p>
+        <a class="detalle" href="images/bolso.jpg">Ampliar la fotografía</a>
+      </div>
+      <img loading="lazy" src="images/bolso.jpg" width="1551" height="2048" alt="Bolso marrón al hombro con un racimo de cuentas de varios colores.">
+    </article>
+  </fieldset>
+</section></main>
 <footer><span class="firma">Hilda Izquierdo</span><a href="#inicio">Volver al inicio</a></footer>
 </body></html>
